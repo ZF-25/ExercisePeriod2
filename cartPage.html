@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BunCraft Co. – Order Details</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-frame">
+    <!-- HEADER -->
+    <header class="cart-header">
+      <button class="back-button">←</button>
+      <h1 class="cart-header-title">Order Details</h1>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="cart-main">
+      <!-- Delivery toggle -->
+      <div class="cart-toggle">
+        <button type="button" class="cart-toggle-btn">Table Reserve</button>
+        <button type="button" class="cart-toggle-btn is-active">Delivery</button>
+      </div>
+
+      <!-- Select restaurant and dropdown -->
+      <div class="restaurant-select-group">
+        <button type="button" class="cart-section-btn cart-select-btn">
+         Select a restaurant ⌄
+        </button>
+
+     <div class="restaurant-dropdown">
+     <div class="restaurant-option">BunCraft – Downtown</div>
+     <div class="restaurant-option">BunCraft – RiverSide</div>
+     </div>
+     </div>
+
+
+      <!-- Contact and Address buttons -->
+      <button type="button" class="cart-section-btn">Contact Details</button>
+      <button type="button" class="cart-section-btn">Address</button>
+
+      <!-- Cart items -->
+      <div class="cart-items">
+        <!-- Special Smash Craft -->
+        <article class="cart-item">
+          <img
+            src="images/Special Smash Craft.png"
+            alt="Special Smash Craft"
+            class="cart-item-image"
+          />
+          <div class="cart-item-info">
+            <div class="cart-item-name">Special Smash Craft</div>
+            <div class="cart-item-unit-price">$11.99</div>
+
+            <div class="cart-item-bottom-row">
+              <div class="cart-qty-pill">
+                <button type="button" class="cart-qty-btn">−</button>
+                <span class="cart-qty-value">2</span>
+                <button type="button" class="cart-qty-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item-total">$23.98</div>
+        </article>
+
+        <!-- Coca-Cola 0.33l -->
+        <article class="cart-item">
+          <img
+            src="images/Coca-Cola 0.33l.png"
+            alt="Coca-Cola 0.33l"
+            class="cart-item-image"
+          />
+          <div class="cart-item-info">
+            <div class="cart-item-name">Coca-Cola 0.33l</div>
+            <div class="cart-item-unit-price">$1.99</div>
+
+            <div class="cart-item-bottom-row">
+              <div class="cart-qty-pill">
+                <button type="button" class="cart-qty-btn">−</button>
+                <span class="cart-qty-value">2</span>
+                <button type="button" class="cart-qty-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item-total">$3.98</div>
+        </article>
+
+        <!-- FruittiCraft Scoop -->
+        <article class="cart-item">
+          <img
+            src="images/FruittiCraft Scoop.png"
+            alt="FruittiCraft Scoop"
+            class="cart-item-image"
+          />
+          <div class="cart-item-info">
+            <div class="cart-item-name">FruittiCraft Scoop</div>
+            <div class="cart-item-unit-price">$6.49</div>
+
+            <div class="cart-item-bottom-row">
+              <div class="cart-qty-pill">
+                <button type="button" class="cart-qty-btn">−</button>
+                <span class="cart-qty-value">1</span>
+                <button type="button" class="cart-qty-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item-total">$6.49</div>
+        </article>
+      </div>
+
+      <!-- Gift card button -->
+      <button type="button" class="gift-card-btn">
+        Add Gift Card
+      </button>
+
+      <!-- Order summary -->
+      <section class="order-summary">
+        <h2 class="order-summary-title">Order Summary</h2>
+        <div class="order-summary-row">
+          <span>Subtotal</span>
+          <span>$34.45</span>
+        </div>
+        <div class="order-summary-row">
+          <span>Delivery</span>
+          <span>$3.99</span>
+        </div>
+        <div class="order-summary-row order-summary-total">
+          <span>TOTAL</span>
+          <span>$38.44</span>
+        </div>
+      </section>
+
+      <!-- Submit button -->
+      <button type="button" class="cart-submit-btn">
+        Submit Order
+      </button>
+    </main>
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <nav class="bottom-nav">
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-icon">☰</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-icon">%</span>
+      </a>
+      <a href="menu.html" class="bottom-nav-item bottom-nav-item--active">
+        <span class="bottom-nav-icon">🏠</span>
+      </a>
+      <a href="cartPage.html" class="bottom-nav-item">
+        <span class="bottom-nav-icon">🛒</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-icon">👤</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

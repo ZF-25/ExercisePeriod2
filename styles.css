@@ -1,0 +1,596 @@
+/* Reseting everything*/
+*, /* (universal selector, selects every element.)*/
+*::before,
+*::after {
+  box-sizing: border-box; /*(When border-box is used, width = content INCLUDES padding and border.)*/
+  margin: 0;
+  padding: 0;
+  /*(Removes the browser’s default margins/padding on elements)*/
+}
+
+html,
+body {
+  height: 100%; 
+}
+
+body {
+  font-family:system-ui, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App frame (iPhone 15 Pro Max) */
+.app-frame {
+  width: 430px;
+  height: 932px;
+  background: #fff6e1;
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Header */
+.menu-header-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 200px;
+}
+
+.menu-header-side {
+  background: #882A0C;
+}
+
+.menu-header-logo-wrapper {
+  background: #ffeed4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-header-logo {
+  max-width: 80%;
+  height: auto;
+}
+.menu-header-bar {
+  background: #882A0C;
+  height: 48px;                
+  display: flex;              
+  justify-content: center;
+  align-items: center;         
+}
+
+.menu-header-bar span {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.20em;      
+}
+
+/* Main content */
+.menu-main {
+  flex: 1;
+  padding: 16px 18px 80px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Category cards */
+.category-card {
+  background: #fff9f4;
+  border-radius: 20px;
+  border: 5px solid #6B3E26;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #2b2b2b;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.category-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: #ffeed4;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.category-text {
+  text-align: center;
+}
+
+.category-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-bottom: 2px;
+}
+
+.category-subtitle {
+  font-size: 12px;
+  color: #2b2b2b;
+}
+
+/* Bottom navigation */
+.bottom-nav {
+  height: 64px;
+  background: #882A0C;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0;
+}
+
+.bottom-nav-item {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #ffeed4;
+}
+
+.bottom-nav-icon {
+  font-size: 22px;
+}
+
+.bottom-nav-item--active .bottom-nav-icon {
+  color: #ffffff;
+}
+
+/*BURGERS PAGE*/
+
+/* Header strip with arrow + title */
+.sub-header-strip {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 200px;
+}
+
+.sub-strip-side {
+  background: #882A0C;
+}
+
+.sub-strip-center {
+  background: #ffeed4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-header-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+/* left block with back arrow */
+.sub-strip-side--left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 18px 0 0 18px;
+}
+
+.back-button {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* main list area */
+.burgers-main {
+  flex: 1;
+  padding: 12px 14px 80px;
+  overflow-y: auto;
+}
+
+/* burger cards */
+.burger-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.burger-card {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 18px;
+  background: #fff9f4;
+}
+
+.burger-image {
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #ffeeda;
+}
+
+.burger-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger-row-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.burger-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.burger-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.burger-desc {
+  font-size: 12px;
+  color: #6a5544;
+  margin-top: 4px;
+}
+
+.burger-cal {
+  font-size: 12px;
+  color: #8c6f59;
+  margin-top: 4px;
+}
+
+/*ITEM DETAIL PAGE (Special Smash)*/
+
+.item-header {
+  padding: 16px 18px 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-button--item {
+  color: #2b2b2b; 
+  font-size: 22px;
+}
+
+.item-title {
+  flex: 1;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-right: 34px;
+  margin-top: 50px;
+}
+
+.item-main {
+  flex: 1;
+  padding: 8px 18px 80px;
+  overflow-y: auto;
+}
+
+.item-image {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin: 20px auto 16px;
+  border-radius: 18px;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.item-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2b2b2b;
+  margin-bottom: 12px;
+}
+
+.item-nutrition-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.item-nutrition {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #2b2b2b;
+  margin-bottom: 12px;
+}
+
+.item-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0c9a3b; 
+  margin-bottom: 16px;
+}
+
+/* quantity pill */
+
+.item-qty-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.item-qty-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: red;
+  color: #ffffff;
+}
+
+.item-qty-btn {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.item-qty-value {
+  font-weight: 600;
+  min-width: 18px;
+  text-align: center;
+}
+
+/*CART / ORDER DETAILS PAGE*/
+
+.cart-header {
+  padding: 16px 18px 10px;
+  background: #882A0C;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-header-title {
+  flex: 1;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: 28px;
+}
+
+.cart-main {
+  flex: 1;
+  padding: 10px 14px 80px;
+  overflow-y: auto;
+}
+
+/*Toggle (Table Reserve / Delivery)*/
+
+.cart-toggle {
+  display: flex;
+  background: #eaa47f;
+  border-radius: 999px;
+  padding: 3px;
+  margin-bottom: 12px;
+}
+
+.cart-toggle-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 0;
+  border-radius: 999px;
+  cursor: default;
+}
+
+.cart-toggle-btn.is-active {
+  background: #fff6e1;
+  color: #882A0C;
+}
+
+/*Section Header Buttons*/
+
+.cart-section-btn {
+  width: 100%;
+  border: none;
+  background: #882A0C;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-align: center !important;
+  margin-bottom: 6px;
+  cursor: default;
+}
+
+/*Restaurant Dropdown Group*/
+
+.restaurant-select-group {
+  margin-bottom: 8px;
+}
+
+/* Top button (Select a restaurant) */
+.cart-select-btn {
+  margin-bottom: 0 !important;   
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center !important;
+}
+
+/* Dropdown menu*/
+.restaurant-dropdown {
+  background: #f5d3af;
+  border: 1px solid #8b5a36;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.restaurant-option {
+  padding: 6px 10px;
+  border-bottom: 1px solid #c79265;
+   text-align: center;  
+}
+
+.restaurant-option:last-child {
+  border-bottom: none;
+}
+
+/*Cart Items List*/
+
+.cart-items {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 56px 1fr 70px;
+  gap: 8px;
+  background: #FFF9F4;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.cart-item-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #ffeeda;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.cart-item-unit-price {
+  font-size: 12px;
+  color: #6a5544;
+  margin-top: 2px;
+}
+
+.cart-item-bottom-row {
+  margin-top: 4px;
+}
+
+.cart-item-total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+/*Quantity Selector Pill*/
+
+.cart-qty-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #882A0C;
+  color: #ffffff;
+}
+
+.cart-qty-btn {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  cursor: default;
+}
+
+.cart-qty-value {
+  min-width: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/*Gift Card Button*/
+
+.gift-card-btn {
+  display: block;
+  margin: 12px auto 10px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #e2d2c5;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+/*Order Summary Box*/
+
+.order-summary {
+  background: #FFF9F4;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.order-summary-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.order-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.order-summary-total {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+/*Submit Button*/
+
+.cart-submit-btn {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 16px;
+  background: #882A0C;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+} 
